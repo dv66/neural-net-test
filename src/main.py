@@ -10,7 +10,7 @@ import pickle
 
 _TRAINING_LOCATION = '../cat-and-dog/processed_merged_training_set/'
 _TESTING_LOCATION = '../cat-and-dog/processed_merged_test_set/'
-_MODEL_FILE_NAME = 'keras__cat_dog_model.h5'
+_MODEL_FILE_NAME = '../trained_model/keras__cat_dog_model.h5'
 _LABEL = {
     'dog' : 0,
     'cat' : 1
@@ -109,9 +109,9 @@ if __name__ == "__main__":
     training_data, training_labels = get_image_arrays_from_files(_TRAINING_LOCATION)
     test_data, test_labels  = get_image_arrays_from_files(_TESTING_LOCATION)
 
-    # model = keras_image_net_model()
-    # model.fit(training_data, training_labels, epochs=10)
-    # model.save(_MODEL_FILE_NAME)
+    model = keras_image_net_model()
+    model.fit(training_data, training_labels, epochs=10)
+    model.save(_MODEL_FILE_NAME)
 
     model = tf.keras.models.load_model(_MODEL_FILE_NAME)
 
