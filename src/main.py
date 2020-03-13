@@ -8,8 +8,8 @@ import random
 import pickle
 
 
-_TRAINING_LOCATION = '../cat-and-dog/processed_merged_training_set/'
-_TESTING_LOCATION = '../cat-and-dog/processed_merged_test_set/'
+_TRAINING_LOCATION = '../dataset/cat-and-dog/processed_merged_training_set/'
+_TESTING_LOCATION = '../dataset/cat-and-dog/processed_merged_test_set/'
 _MODEL_FILE_NAME = '../trained_model/keras__cat_dog_model.h5'
 _LABEL = {
     'dog' : 0,
